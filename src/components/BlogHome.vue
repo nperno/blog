@@ -1,0 +1,62 @@
+<template>
+  <div id="blog-home">
+    <h1 class="my-4">
+      {{ page_title }}
+      <small>Secondary Text</small>
+    </h1>
+
+    <!-- Blog Post -->
+    <div class="card mb-4" v-for="(post, index) in posts" :key="post.slug + '_' + index">
+      <router-link :to="'/blog/' + post.slug">
+        <img class="card-img-top" v-if="post.featured_image" :src="post.featured_image" alt>
+        <img v-else src="http://via.placeholder.com/250x250" alt>
+        <div class="card-body">
+          <h2 class="card-title">{{ post.title }}</h2>
+          <p class="card-text">{{ post.summary }}</p>
+        </div>
+        <div class="card-footer text-muted">Posted on January 1, 2017 by</div>
+      </router-link>
+    </div>
+
+    <!-- Pagination -->
+    <ul class="pagination justify-content-center mb-4">
+      <li class="page-item">
+        <a class="page-link" href="#">&larr; Older</a>
+      </li>
+      <li class="page-item disabled">
+        <a class="page-link" href="#">Newer &rarr;</a>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script>
+import { butter } from "@/buttercms";
+export default {
+  name: "blog-home",
+  data() {
+    return {
+      page_title: "Blog",
+      posts: []
+    };
+  },
+  methods: {
+    getPosts() {
+      butter.post
+        .list({
+          page: 1,
+          page_size: 10
+        })
+        .then(res => {
+          this.posts = res.data.data;
+        });
+    }
+  },
+  created() {
+    this.getPosts();
+  },
+  
+};
+</script>
+
+<style></style>
