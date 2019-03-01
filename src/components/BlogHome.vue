@@ -6,7 +6,8 @@
     </h1>
 
     <!-- Blog Post -->
-    <div class="card mb-4" v-for="(post, index) in posts" :key="post.slug + '_' + index">
+    <div class="card-columns">
+    <div class="card w-100"  v-for="(post, index) in posts" :key="post.slug + '_' + index">
       <router-link :to="'/blog/' + post.slug">
         <img class="card-img-top" v-if="post.featured_image" :src="post.featured_image" alt>
         <img v-else src="http://via.placeholder.com/250x250" alt>
@@ -16,6 +17,7 @@
         </div>
         <div class="card-footer text-muted">Posted on January 1, 2017 by</div>
       </router-link>
+    </div>
     </div>
 
     <!-- Pagination -->

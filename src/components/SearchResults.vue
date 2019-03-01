@@ -39,6 +39,11 @@ export default {
     }},
     created() {
       this.getPosts();
-    }
+    },
+    watch: {
+    // whenever question changes, this function will run
+    query: function(){
+      this.getPosts();
+    }}
   };
 </script>
