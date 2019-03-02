@@ -47,10 +47,9 @@ export default {
   },
   methods: {
     getPostsByCat() {
-      if (this.$route.params.slug == "all") {
-        this.getPosts();
-      } else {
-        butter.post
+      if (this.$route.params.slug) {
+        
+                butter.post
           .list({
             page: 1,
             page_size: 10,
@@ -59,6 +58,8 @@ export default {
           .then(res => {
             this.posts = res.data.data;
           });
+      } else {
+this.getPosts();
       }
     },
     getPosts() {

@@ -21,7 +21,7 @@
               <router-link to="/">Home</router-link>|
             </li>
             <li>
-              <router-link class="navbar-item" to="/blog/all">Blog Posts</router-link>
+              <router-link class="navbar-item" to="/blog">Blog Posts</router-link>
             </li>
             <li v-for="(categories, index) in categories" :key="categories.slug + '_' + index">
               <router-link :to="/blog/ + categories.slug">{{categories.name}}</router-link>|
