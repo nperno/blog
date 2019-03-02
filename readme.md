@@ -32,6 +32,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 https://cli.vuejs.org/guide/deployment.html#github-pages
 
 ## todo
+- routing is not working right, can i bing the api reslts to an object - feels like i can
+- add a transition when opening a post
+- it should just be able
 - search
 - home page
 - cateogries at the top level for nav (abc order)

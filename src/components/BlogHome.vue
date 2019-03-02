@@ -2,22 +2,25 @@
   <div id="blog-home">
     <h1 class="my-4">
       {{ page_title }}
-      <small>Secondary Text</small>
+   <small>{{this.$route.params.slug}}</small>
     </h1>
 
     <!-- Blog Post -->
     <div class="card-columns">
-    <div class="card w-100"  v-for="(post, index) in posts" :key="post.slug + '_' + index">
-      <router-link :to="'/blog/' + post.slug">
-        <img class="card-img-top" v-if="post.featured_image" :src="post.featured_image" alt>
-        <img v-else src="http://via.placeholder.com/250x250" alt>
-        <div class="card-body">
-          <h2 class="card-title">{{ post.title }}</h2>
-          <p class="card-text">{{ post.summary }}</p>
-        </div>
-        <div class="card-footer text-muted">Posted on January 1, 2017 by</div>
-      </router-link>
-    </div>
+      <div  v-for="(post, index) in posts" :key="post.slug + '_' + index">
+      <div class="card w-100">
+        <router-link :to="'/post/' + post.slug">
+          <img class="card-img-top" v-if="post.featured_image" :src="post.featured_image" alt>  
+          <img v-else src="http://via.placeholder.com/250x250" alt>
+          <div class="card-body">
+            <h2 class="card-title">{{ post.title }}</h2>
+            <p class="card-text">{{ post.summary }}</p>
+            {{post.categorys}}
+          </div>
+          <div class="card-footer text-muted">Posted on January 1, 2017 by</div>
+        </router-link>
+      </div>
+      </div>
     </div>
 
     <!-- Pagination -->
@@ -43,21 +46,41 @@ export default {
     };
   },
   methods: {
-    getPosts() {
+    getPostsByCat() {
+      if (this.$route.params.slug) {
+        butter.post
+          .list({
+            page: 1,
+            page_size: 10,
+            category_slug: this.$route.params.slug
+          })
+          .then(res => {
+            this.posts = res.data.data;
+          });
+      }else{
+        getPosts()
+      }
+    },
+    getPosts(){
       butter.post
-        .list({
-          page: 1,
-          page_size: 10
-        })
-        .then(res => {
-          this.posts = res.data.data;
-        });
+          .list({
+            page: 1,
+            page_size: 10
+          })
+          .then(res => {
+            this.posts = res.data.data;
+          });
     }
   },
+  watch: {
+    $route(to) {
+      this.getPostsByCat(this.$route.params.slug);
+    },
+
+  },    
   created() {
-    this.getPosts();
-  },
-  
+      this.getPosts();
+    }
 };
 </script>
 

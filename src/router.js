@@ -23,6 +23,11 @@ export default new Router({
     },
     {
       path: "/blog/:slug",
+      name: "blog-home",
+      component: BlogHome
+    },
+    {
+      path: "/post/:slug",
       name: "blog-post",
       component: BlogPost
     },

@@ -23,13 +23,10 @@
             <li>
               <router-link class="navbar-item" to="/blog">Blog Posts</router-link>
             </li>
+            <li v-for="(categories, index) in categories" :key="categories.slug + '_' + index">
+              <router-link :to="/blog/ + categories.slug">{{categories.name}}</router-link>|
+            </li>
           </ul>
-                              <li
-                      v-for="(categories, index) in categories"
-                      :key="categories.slug + '_' + index"
-                    >
-                      <a href="#">{{ categories.name }}</a>
-                    </li>
         </div>
       </div>
     </nav>
@@ -53,41 +50,24 @@
 </template>
 <script>
 import { butter } from "@/buttercms";
+
 export default {
   name: "app",
-
   data() {
     return {
-      categories: [],
-      searchText: "",
-      tags: []
+      categories: []
     };
   },
+
   methods: {
     getCategories() {
       butter.category.list({ page: 1 }).then(res => {
         this.categories = res.data.data;
       });
-    },
-    getAuthors() {
-      butter.tag.list({ page: 1 }).then(res => {
-        this.tags = res.data.data;
-      });
-    },
-    search(slug) {
-      this.$router.push({ name: "search-results", params: { slug: slug } });
-    },
-    getPostsByCategory() {
-      butter.category
-        .retrieve("example-category", {
-          include: "recent_posts"
-        });
     }
   },
   created() {
     this.getCategories();
-    this.getPostsByCategory();
-    this.getAuthors();
   }
 };
 </script>
