@@ -12,7 +12,7 @@
     <hr />
 
     <!-- Date/Time -->
-    <p>Posted on January 1, 2019 at 12:00 PM</p>
+    <p>{{ post.data.published | formatDate("ddd, hA")}} </p>
 
     <hr />
 

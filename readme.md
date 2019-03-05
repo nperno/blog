@@ -38,3 +38,6 @@ https://cli.vuejs.org/guide/deployment.html#github-pages
 - search
 - home page
 - cateogries at the top level for nav (abc order)
+
+- jumbotron with logos, do a post about the blog https://vuejs.org/v2/cookbook/serverless-blog.html
+- page of interesting articles

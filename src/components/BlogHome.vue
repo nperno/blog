@@ -17,7 +17,7 @@
               <p class="card-text">{{ post.summary }}</p>
               {{post.categorys}}
             </div>
-            <div class="card-footer text-muted">Posted on January 1, 2017 by</div>
+            <div class="card-footer text-muted">Posted on {{post.published | formatDate("ddd, hA")}}</div>
           </router-link>
         </div>
       </div>
@@ -74,7 +74,7 @@ this.getPosts();
     }
   },
   watch: {
-    $route(to) {
+    $route() {
       this.getPostsByCat(this.$route.params.slug);
     }
   },

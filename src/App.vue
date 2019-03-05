@@ -16,20 +16,21 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <router-link to="/">Home</router-link>|
+          <ul class="navbar-nav ml-auto ">
+            <li class="nav-item ">
+              <router-link to="/"  class="nav-link" >Home</router-link>
             </li>
             <li>
-              <router-link class="navbar-item" to="/blog">Blog Posts</router-link>
+              <router-link  class="nav-link"  to="/blog">Blog Posts</router-link>
             </li>
             <li v-for="(categories, index) in categories" :key="categories.slug + '_' + index">
-              <router-link :to="/blog/ + categories.slug">{{categories.name}}</router-link>|
+            <router-link :to="/blog/ + categories.slug"  class="nav-link" >{{categories.name}}</router-link>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    
     <!-- Page Content -->
     <div class="container">
       <div class="row">
@@ -42,7 +43,11 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+        <p class="m-0 text-center text-white">Copyright &copy; NAPATI 2019
+          <br/>  
+        <a href="https://buttercms.com" target="_blank">
+          <img class="w-25" src="https://cdn.buttercms.com/JSSDbrHPSnGlLUcyHTn5">
+        </a></p>
       </div>
       <!-- /.container -->
     </footer>
