@@ -8,13 +8,7 @@
     </div>
     <div class="row text-center">
       <div class="col-lg-4">
-        <img
-          class="rounded-circle"
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-          alt="Generic placeholder image"
-          width="140"
-          height="140"
-        >
+        <i class="fas fa-server fa-4x"></i>
         <h2>DevOps</h2>
         <p>From Azure DevOps to Docker I enjoy the process of Delivering software with modern CI and CD processes.</p>
         <p>
@@ -23,13 +17,7 @@
       </div>
       <!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <img
-          class="rounded-circle"
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-          alt="Generic placeholder image"
-          width="140"
-          height="140"
-        >
+        <i class="fas fa-code fa-4x"></i>
         <h2>Code</h2>
         <p>Over the past 10 years I have been exposed to various programing languages. VB, C#, JavaScript, SQL, to Java. I am by no means an expert programmer, but love the craft!</p>
         <p>
@@ -38,13 +26,7 @@
       </div>
       <!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <img
-          class="rounded-circle"
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-          alt="Generic placeholder image"
-          width="140"
-          height="140"
-        >
+        <i class="fas fa-truck-monster fa-4x"></i>
         <h2>Automotive</h2>
         <p>I have always had a passion for anything automotive. Jeeps and Trucks are my primary interest. A few years back I restored a CJ7 and have made many modifications to various Jeep platforms over the last few years.</p>
         <p>
@@ -56,13 +38,7 @@
     <!-- /.row -->
     <div class="row text-center">
       <div class="col-lg-4">
-        <img
-          class="rounded-circle"
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-          alt="Generic placeholder image"
-          width="140"
-          height="140"
-        >
+        <i class="fas fa-briefcase fa-4x"></i>
         <h2>Business & Leadership</h2>
         <p>Both Business and Leadership topics interest me. Read lessons learned, opinions, and advice from my real world experiance.</p>
         <p>
@@ -71,13 +47,7 @@
       </div>
       <!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <img
-          class="rounded-circle"
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-          alt="Generic placeholder image"
-          width="140"
-          height="140"
-        >
+        <i class="fas fa-laptop fa-4x"></i>
         <h2>Technology</h2>
         <p>My core interest and at the center of just about everything I do. Read about my journey, thougths, and ideas on past, present, and future technologies.</p>
         <p>
@@ -86,13 +56,7 @@
       </div>
       <!-- /.col-lg-4 -->
       <div class="col-lg-4">
-        <img
-          class="rounded-circle"
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-          alt="Generic placeholder image"
-          width="140"
-          height="140"
-        >
+        <i class="fab fa-raspberry-pi fa-4x"></i>
         <h2>Hobbies</h2>
         <p>With hobbies from word working, to "jeeping", to fiddling with the Raspberry PI I try to blend my interests and have fun!</p>
         <p>

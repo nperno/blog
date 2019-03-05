@@ -5,6 +5,7 @@
  */
 body {
   padding-top: 56px;
+  font-family: 'IBM Plex Mono', monospace;
 }
 figure > img{
   max-width: 100%;
